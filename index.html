@@ -104,7 +104,14 @@
             <p>4kilo, Addis Ababa, Ethiopia</p>
 
             <!-- Google Maps Embed -->
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.334431053692!2d38.76114801010909!3d9.03322588888635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b850037ac00ff%3A0x2718a1624b2fc1df!2zNCBLaWxvIFBsYXphIHwgNCDhiqrhiI4g4Y2V4YiL4Yub!5e0!3m2!1sen!2set!4v1733785688342!5m2!1sen!2set" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.334431053692!2d38.76114801010909!3d9.03322588888635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b850037ac00ff%3A0x2718a1624b2fc1df!2zNCBLaWxvIFBsYXphIHwgNCDhiqrhiI4g4Y2V4YiL4Yub!5e0!3m2!1sen!2set!4v1733785688342!5m2!1sen!2set"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
         </section>
         <section id="contactus">
             <h2>Contact Us</h2>
@@ -131,22 +138,21 @@
             </div>
         </section>
 
-    <!-- Chatbot Icon -->
-    <div id="chatbot-icon" onclick="toggleChatbot()">
-        <img src="./images/chat-icon.png" alt="Chatbot Icon">
-    </div>
-
-    <!-- Chatbot Iframe (Initially hidden) -->
-    <div id="chatbot-container">
-        <iframe
-            allow="microphone;"
-            width="350"
-            height="430"
-            src="https://console.dialogflow.com/api-client/demo/embedded/d82e500f-f942-4496-b226-fbafef9456f5">
-        </iframe>
-        <button id="close-chatbot" onclick="toggleChatbot()">Close</button>
-    </div>
+ 
+        <div id="chatbot-container">
+            <iframe
+                allow="microphone;"
+                id="chatbot-iframe"
+                src="https://console.dialogflow.com/api-client/demo/embedded/d82e500f-f942-4496-b226-fbafef9456f5">
+            </iframe>
+            <button id="close-chatbot" onclick="toggleChatbot()">Close</button>
         </div>
+
+        <!-- Chatbot Icon -->
+        <div id="chatbot-icon" onclick="toggleChatbot()">
+            <img src="./images/chat-icon.png" alt="Chatbot Icon">
+        </div>
+
 
     <script src="./js/scripts.js"></script>
 
