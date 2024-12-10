@@ -240,7 +240,7 @@ iframe {
 #chatbot-container {
     position: fixed;
     right: 20px;
-    bottom: 100px; /* position the iframe just above the chatbot icon */
+    bottom: 50px; /* position the iframe just above the chatbot icon */
     display: none;
     z-index: 1000;
     border-radius: 8px;
