@@ -13,6 +13,7 @@ header {
     color: #fff;
 }
 
+
 h1 {
     margin: 0;
     padding: 0;
@@ -28,6 +29,78 @@ nav a {
 nav a:hover {
     color: #f0f0f0;
 }
+
+/* General Styles */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+}
+
+/* Logo */
+.logo h1 {
+    font-size: 24px;
+    color: #fff;
+}
+
+/* Navigation Links (Default for Large Screens) */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #f4d03f; /* Yellow highlight */
+}
+
+/* Hamburger Menu (Hidden on Large Screens) */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Show hamburger icon */
+    }
+
+    .nav-links {
+        display: none; /* Hide links initially */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #333;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-links.active {
+        display: flex; /* Show links when active */
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+}
+
+
 
 section {
     margin: 20px;

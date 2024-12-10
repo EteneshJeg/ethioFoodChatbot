@@ -4,25 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="CSS/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <!-- Favicon Link -->
 <link rel="icon" href="./images/foodFav.png" type="image/png">
 
 
-    <title>Fetan Food Delivery</title>
+    <title>Fetan Food chatbot</title>
 </head>
 
 <body>
     <div class="container">
         <header>
             <nav>
-                <a href="#home">HOME</a> |
-                <a href="#menu">MENU</a> |
-                <a href="#location">LOCATION</a> |
-                <a href="#contactus">CONTACT US</a>
+                <div class="nav-container">
+                    <!-- Logo or Brand -->
+                    <div class="logo">
+                        <img src="./images/foodFav.png" style="width: 50px; height: auto;">
+                    </div>
+
+                    <!-- Hamburger Icon -->
+                    <div class="hamburger" id="hamburger">
+                        &#9776; <!-- Unicode character for the hamburger menu -->
+                    </div>
+                    <!-- Navigation Links -->
+                    <ul class="nav-links" id="nav-links">
+                        <li><a href="#home">HOME</a></li>
+                        <li><a href="#menu">MENU</a></li>
+                        <li><a href="#location">LOCATION</a></li>
+                        <li><a href="#contactus">CONTACT US</a></li>
+                    </ul>
+                </div>
             </nav>
         </header>
+
 
         <section id="home">
             <img src="./images/banner.png" alt="Banner Image">
@@ -90,7 +105,7 @@
 
             <!-- Google Maps Embed -->
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.334431053692!2d38.76114801010909!3d9.03322588888635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b850037ac00ff%3A0x2718a1624b2fc1df!2zNCBLaWxvIFBsYXphIHwgNCDhiqrhiI4g4Y2V4YiL4Yub!5e0!3m2!1sen!2set!4v1733785688342!5m2!1sen!2set" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-       </section>
+        </section>
         <section id="contactus">
             <h2>Contact Us</h2>
             <p>We'd love to hear from you! Feel free to get in touch for inquiries, orders, or feedback. Our team is here to assist you.</p>
@@ -133,39 +148,7 @@
     </div>
         </div>
 
-
-    <script>
-        // Function to toggle the chatbot visibility
-        function toggleChatbot() {
-            const chatbotContainer = document.getElementById('chatbot-container');
-            const chatbotIcon = document.getElementById('chatbot-icon');
-
-            // If the chatbot iframe is hidden, show it and hide the icon
-            if (chatbotContainer.style.display === 'none' || chatbotContainer.style.display === '') {
-                chatbotContainer.style.display = 'block';
-                chatbotIcon.style.display = 'none';
-            } else {
-                // If the chatbot iframe is visible, hide it and show the icon
-                chatbotContainer.style.display = 'none';
-                chatbotIcon.style.display = 'block';
-            }
-        }
-
-        // Function to hide the chatbot when clicking outside the iframe
-        window.onclick = function(event) {
-            const chatbotContainer = document.getElementById('chatbot-container');
-            const chatbotIcon = document.getElementById('chatbot-icon');
-            
-            // Check if the user clicked outside the chatbot container and icon
-            if (event.target !== chatbotContainer && event.target !== chatbotIcon && event.target !== document.getElementById('close-chatbot')) {
-                chatbotContainer.style.display = 'none';
-                chatbotIcon.style.display = 'block';
-            }
-        }
-    </script>
-
-
-
+    <script src="./js/scripts.js"></script>
 
 </body>
 
