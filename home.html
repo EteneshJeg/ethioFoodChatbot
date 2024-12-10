@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Favicon Link -->
+<link rel="icon" href="./images/foodFav.png" type="image/png">
+
+
+    <title>Fetan Food Delivery</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <a href="#home">HOME</a> |
+                <a href="#menu">MENU</a> |
+                <a href="#location">LOCATION</a> |
+                <a href="#contactus">CONTACT US</a>
+            </nav>
+        </header>
+
+        <section id="home">
+            <img src="./images/banner.png" alt="Banner Image">
+            <!-- Add images here -->
+        </section>
+
+        <section>
+                <h2>Our Menu</h2>
+        
+        </section>
+
+        <section id="menu">
+            
+            
+            <div class="menu-item">
+                <img src="./images/menu12.jfif" alt="Injera Firfir">
+                <div class="food-name">Injera Firfir</div>
+                <div class="food-price">200 Birr</div>
+            </div>
+            <div class="menu-item">
+                <img src="./images/menu22.jpg" alt="Tibs">
+                <div class="food-name">Tibs</div>
+                <div class="food-price">400 Birr</div>
+            </div>
+            <div class="menu-item">
+                <img src="./images/menu2.jpg" alt="Shiro">
+                <div class="food-name">Shiro</div>
+                <div class="food-price">200 Birr</div>
+            </div>
+            <div class="menu-item">
+                <img src="./images/menu3.jpg" alt="Kitfo">
+                <div class="food-name">Kitfo</div>
+                <div class="food-price">500 Birr</div>
+            </div>
+            <div class="menu-item">
+                <img src="./images/menu4.jfif" alt="Doro Wat">
+                <div class="food-name">Doro Wat</div>
+                <div class="food-price">600 Birr</div>
+            </div>
+            <div class="menu-item">
+                <img src="./images/menu52.jfif" alt="Beyaynet">
+                <div class="food-name">Beyaynet</div>
+                <div class="food-price">200 Birr</div>
+            </div>
+            <div class="menu-item">
+                <img src="./images/menu6.webp" alt="Misir Wot">
+                <div class="food-name">Misir Wot</div>
+                <div class="food-price">200 Birr</div>
+            </div>
+            <div class="menu-item">
+                <img src="./images/menu7.webp" alt="Gomen">
+                <div class="food-name">Gomen</div>
+                <div class="food-price">200 Birr</div>
+            </div>
+            <div class="menu-item">
+                <img src="./images/menu8.jpg" alt="Chechebsa">
+                <div class="food-name">Chechebsa</div>
+                <div class="food-price">200 Birr</div>
+            </div>
+        </section>
+
+        <section id="location">
+            <h2>Location</h2>
+            <p>4kilo, Addis Ababa, Ethiopia</p>
+
+            <!-- Google Maps Embed -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.334431053692!2d38.76114801010909!3d9.03322588888635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b850037ac00ff%3A0x2718a1624b2fc1df!2zNCBLaWxvIFBsYXphIHwgNCDhiqrhiI4g4Y2V4YiL4Yub!5e0!3m2!1sen!2set!4v1733785688342!5m2!1sen!2set" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+       </section>
+        <section id="contactus">
+            <h2>Contact Us</h2>
+            <p>We'd love to hear from you! Feel free to get in touch for inquiries, orders, or feedback. Our team is here to assist you.</p>
+
+            <!-- Contact and Image Section -->
+            <div class="contact-container">
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <p><strong>Phone:</strong> +251-968483649</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p><strong>Email:</strong> <a href="mailto:etenesh4good@gmail.com">etenesh4good@gmail.com</a></p>
+                    </div>
+                </div>
+
+                <!-- Contact Image -->
+                <div class="contact-image">
+                    <img src="./images/contactus.jpg" alt="Contact Us Image">
+                </div>
+            </div>
+        </section>
+
+    <!-- Chatbot Icon -->
+    <div id="chatbot-icon" onclick="toggleChatbot()">
+        <img src="./images/chat-icon.png" alt="Chatbot Icon">
+    </div>
+
+    <!-- Chatbot Iframe (Initially hidden) -->
+    <div id="chatbot-container">
+        <iframe
+            allow="microphone;"
+            width="350"
+            height="430"
+            src="https://console.dialogflow.com/api-client/demo/embedded/d82e500f-f942-4496-b226-fbafef9456f5">
+        </iframe>
+        <button id="close-chatbot" onclick="toggleChatbot()">Close</button>
+    </div>
+        </div>
+
+
+    <script>
+        // Function to toggle the chatbot visibility
+        function toggleChatbot() {
+            const chatbotContainer = document.getElementById('chatbot-container');
+            const chatbotIcon = document.getElementById('chatbot-icon');
+
+            // If the chatbot iframe is hidden, show it and hide the icon
+            if (chatbotContainer.style.display === 'none' || chatbotContainer.style.display === '') {
+                chatbotContainer.style.display = 'block';
+                chatbotIcon.style.display = 'none';
+            } else {
+                // If the chatbot iframe is visible, hide it and show the icon
+                chatbotContainer.style.display = 'none';
+                chatbotIcon.style.display = 'block';
+            }
+        }
+
+        // Function to hide the chatbot when clicking outside the iframe
+        window.onclick = function(event) {
+            const chatbotContainer = document.getElementById('chatbot-container');
+            const chatbotIcon = document.getElementById('chatbot-icon');
+            
+            // Check if the user clicked outside the chatbot container and icon
+            if (event.target !== chatbotContainer && event.target !== chatbotIcon && event.target !== document.getElementById('close-chatbot')) {
+                chatbotContainer.style.display = 'none';
+                chatbotIcon.style.display = 'block';
+            }
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>
