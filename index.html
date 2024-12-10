@@ -138,21 +138,24 @@
             </div>
         </section>
 
- 
-        <div id="chatbot-container">
-            <iframe
-                allow="microphone;"
-                id="chatbot-iframe"
-                src="https://console.dialogflow.com/api-client/demo/embedded/d82e500f-f942-4496-b226-fbafef9456f5">
-            </iframe>
-            <button id="close-chatbot" onclick="toggleChatbot()">Close</button>
-        </div>
-
-        <!-- Chatbot Icon -->
+   <!-- Chatbot Icon -->
         <div id="chatbot-icon" onclick="toggleChatbot()">
             <img src="./images/chat-icon.png" alt="Chatbot Icon">
         </div>
 
+        <!-- Chatbot Iframe (Initially hidden) -->
+    <div id="chatbot-container">
+        <iframe
+            allow="microphone;"
+            width="350"
+            height="430"
+            src="https://console.dialogflow.com/api-client/demo/embedded/d82e500f-f942-4496-b226-fbafef9456f5">
+        </iframe>
+        <button id="close-chatbot" onclick="toggleChatbot()">Close</button>
+    </div>
+        </div>
+
+      
 
     <script src="./js/scripts.js"></script>
 
